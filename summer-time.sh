@@ -76,7 +76,7 @@ show_help_menu()
     echo "-h  exibe este menu de ajuda"
     echo ""
     echo "contact: alexandre.fmenezes@gmail.com"
-    echo "- bsecteam - <http://www.bsecteam.com/> <2013-2016>"
+    echo "bsecteam (C) [2013-2016] - <http://www.bsecteam.com/>"
 }
  
 while getopts "sth" opt; do
