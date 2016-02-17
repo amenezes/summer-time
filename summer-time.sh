@@ -68,7 +68,7 @@ show_help_menu()
 {
     echo ">> $0"
     echo "Usage:"
-    echo "Sample:\tsh $0"
+    echo "Sample: sh $0"
     echo ""
     echo "Options:"
     echo "-s  efetua as mudancas necessarias de timezone para o horario de verao"
