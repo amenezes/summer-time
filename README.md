@@ -14,5 +14,4 @@ Options:
  
 <h4>Contato:</h4>
  * autor: alexandre menezes
- * e-mail: alexandre.fmenezes@gmail.com
  * twitter: @ale_menezes
