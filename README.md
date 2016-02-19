@@ -1,5 +1,5 @@
 # summer-time
-A script to check and change summer time in brazil
+A script to check and change summer time in unix systems in brazil
 
 <h4>Uso:</h4>
 <pre>
