@@ -14,4 +14,4 @@ Options:
  
 <h4>Contato:</h4>
  * autor: alexandre menezes
- * twitter: @ale_menezes
+ * twitter: <a href="https://www.twitter.com/ale_menezes/">@ale_menezes</a>
