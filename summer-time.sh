@@ -11,16 +11,16 @@
 # sh summer-time.sh
 #
  
-LOCALTIME=`date | grep -i brt | wc -l`
+LOCALTIME=$(date | grep -ci brt)
 BRT_ZONEINFO="/usr/share/zoneinfo/Brazil/East"
-ZDUMP=`find /usr -maxdepth 2 -name zdump`
+ZDUMP=$(find /usr -maxdepth 2 -name zdump)
  
 show_current_summer_time()
 {
-    CURRENT_YEAR=`date | cut -d' ' -f5`
-    echo "`zdump -v $BRT_ZONEINFO | grep $CURRENT_YEAR | grep -i oct`"
-    NEXT_YEAR=`expr $CURRENT_YEAR + 1`
-    echo "`zdump -v $BRT_ZONEINFO | grep $NEXT_YEAR | grep -i feb`"
+    CURRENT_YEAR=$(date | cut -d' ' -f5)
+    echo "$(zdump -v "$BRT_ZONEINFO" | grep "$CURRENT_YEAR" | grep -i oct)"
+    NEXT_YEAR=$(expr "$CURRENT_YEAR" + 1)
+    echo "$(zdump -v "$BRT_ZONEINFO" | grep "$NEXT_YEAR" | grep -i feb)"
 }
  
 config_test()
@@ -37,7 +37,7 @@ config_test()
     *)
         echo "[*] alteracoes de timezone necessarias!"
         echo "[*] timezone atual:"
-        echo "[*] `date | cut -d' ' -f5`"
+        echo "[*] $(date | cut -d' ' -f5)"
         ;;
     esac
 }
@@ -51,7 +51,7 @@ make_adjust()
         echo "[*] inicializando alteracoes..."
         rm /etc/localtime; ln -s $BRT_ZONEINFO /etc/localtime
         echo "[*] alteracoes efetuadas com sucesso!"
-        TIMEZONE=`date | cut -d' ' -f5`
+        TIMEZONE=$(date | cut -d' ' -f5)
         echo "[*] timezone ajustado para <$TIMEZONE>"
         if [ -a "$ZDUMP" ]
         then
