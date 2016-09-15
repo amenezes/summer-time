@@ -19,7 +19,7 @@ show_current_summer_time()
 {
     CURRENT_YEAR=$(date | cut -d' ' -f5)
     echo "$(zdump -v "$BRT_ZONEINFO" | grep "$CURRENT_YEAR" | grep -i oct)"
-    NEXT_YEAR=$(expr "$CURRENT_YEAR" + 1)
+    NEXT_YEAR=$(($CURRENT_YEAR+1))
     echo "$(zdump -v "$BRT_ZONEINFO" | grep "$NEXT_YEAR" | grep -i feb)"
 }
  
